@@ -69,7 +69,7 @@ GLASS achieves a lightweight architecture with only **15.44M parameters** while 
 
 GLASS demonstrates near-linear GPU memory growth with increasing image resolution, enabling scalable inference for high-resolution image restoration.
 
-<p align="left">
+<p align="center">
     <img src="assets/memory_scaling.png" width="50%">
 </p>
 
@@ -79,7 +79,7 @@ GLASS demonstrates near-linear GPU memory growth with increasing image resolutio
 
 Qualitative comparisons on benchmark datasets.
 
-<p align="left">
+<p align="center">
     <img src="assets/qualitative_results.png" width="50%">
 </p>
 
@@ -190,14 +190,3 @@ If you find this work useful in your research, please cite:
 }
 ```
 
----
-
-## Acknowledgements
-
-This repository is built using the BasicSR framework.
-
----
-
-## License
-
-This project is released under the Apache License 2.0. See the `LICENSE` file for details.
