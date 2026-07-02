@@ -1,0 +1,14 @@
+numpy<2
+torch>=2.0.1
+torchvision>=0.15.2
+opencv-python
+scikit-image
+pyyaml
+tqdm
+yapf
+Pillow
+matplotlib
+tensorboard
+lmdb
+timm
+thop

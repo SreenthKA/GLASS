@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+*.so
+
+# BasicSR experiment outputs
+experiments/
+results/
+results_*/
+tb_logger/
+wandb/
+*.log
+
+# Datasets (keep the layout docs and example only)
+datasets/*
+!datasets/README.md
+!datasets/example/
+!datasets/example/**
+
+# Model checkpoints (released separately)
+*.pth
+*.pth.tar
+*.ckpt
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environments
+.venv/
+venv/
+env/

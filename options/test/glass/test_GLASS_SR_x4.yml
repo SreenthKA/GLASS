@@ -1,0 +1,87 @@
+# general settings for GLASS classic image SR testing (x4)
+name: test_GLASS_SR_x4
+model_type: GLASSModel
+scale: 4
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  test_1:  # Set5
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: datasets/test/Set5/HR
+    dataroot_lq: datasets/test/Set5/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+  test_2:  # Set14
+    name: Set14
+    type: PairedImageDataset
+    dataroot_gt: datasets/test/Set14/HR
+    dataroot_lq: datasets/test/Set14/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+  test_3:  # BSD100
+    name: B100
+    type: PairedImageDataset
+    dataroot_gt: datasets/test/B100/HR
+    dataroot_lq: datasets/test/B100/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+  test_4:  # Urban100
+    name: Urban100
+    type: PairedImageDataset
+    dataroot_gt: datasets/test/Urban100/HR
+    dataroot_lq: datasets/test/Urban100/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+  test_5:  # Manga109
+    name: Manga109
+    type: PairedImageDataset
+    dataroot_gt: datasets/test/Manga109/HR
+    dataroot_lq: datasets/test/Manga109/LR_bicubic/X4
+    filename_tmpl: '{}_LRBI_x4'
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: GLASS
+  upscale: 4
+  in_chans: 3
+  img_size: 64
+  img_range: 1.
+  depths: [6, 6, 6, 6, 6, 6]
+  num_heads: 6
+  embed_dim: 180
+  mlp_ratio: 2
+  upsampler: 'pixelshuffle'
+  resi_connection: '1conv'
+  drop_path_rate: 0.5
+
+# path
+path:
+  pretrain_network_g: experiments/pretrained_models/GLASS_SR_x4.pth
+  strict_load_g: true
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: true
