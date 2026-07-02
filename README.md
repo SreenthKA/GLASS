@@ -6,7 +6,7 @@
 
 **Authors**
 
-Sreenath K A* · Nishalini K* · Jiji C V
+[Sreenath K A](https://github.com/SreenthKA)* · [Nishalini K](https://github.com/NishaliniKumar)* · Jiji C V
 
 Department of Computer Science  
 Shiv Nadar University Chennai
