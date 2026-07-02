@@ -38,7 +38,7 @@ GLASS follows a three-stage super-resolution pipeline consisting of:
 3. High-Quality Image Reconstruction
 
 <p align="center">
-    <img src="assets/architecture.png" width="95%">
+    <img src="assets/architecture.png" width="60%">
 </p>
 
 ---
@@ -48,7 +48,7 @@ GLASS follows a three-stage super-resolution pipeline consisting of:
 The proposed GLASS architecture is evaluated on five standard benchmark datasets including Set5, Set14, BSD100, Urban100, and Manga109 for ×2, ×3, and ×4 super-resolution.
 
 <p align="center">
-    <img src="assets/results_table.png" width="100%">
+    <img src="assets/results_table.png" width="75%">
 </p>
 
 ---
@@ -69,8 +69,8 @@ GLASS achieves a lightweight architecture with only **15.44M parameters** while 
 
 GLASS demonstrates near-linear GPU memory growth with increasing image resolution, enabling scalable inference for high-resolution image restoration.
 
-<p align="center">
-    <img src="assets/memory_scaling.png" width="70%">
+<p align="left">
+    <img src="assets/memory_scaling.png" width="50%">
 </p>
 
 ---
@@ -79,8 +79,8 @@ GLASS demonstrates near-linear GPU memory growth with increasing image resolutio
 
 Qualitative comparisons on benchmark datasets.
 
-<p align="center">
-    <img src="assets/qualitative_results.png" width="100%">
+<p align="left">
+    <img src="assets/qualitative_results.png" width="50%">
 </p>
 
 ---
@@ -106,7 +106,7 @@ GLASS
 Clone the repository and install the required dependencies.
 
 ```bash
-git clone https://github.com/<username>/GLASS.git
+git clone https://github.com/SreenthKA/GLASS.git
 
 cd GLASS
 
@@ -123,10 +123,10 @@ python setup.py develop
 
 ## Dataset
 
-Training is performed using the **DF2K** dataset.
+Training is performed using the [**DF2K**](https://drive.google.com/file/d/1TubDkirxl4qAWelfOnpwaSKoj3KLAIG4/view?usp=share_link) dataset.
 
 Evaluation is conducted on:
-
+[Test Dataset](https://drive.google.com/file/d/1n-7pmwjP0isZBK7w3tx2y8CTastlABx1/view?usp=sharing)
 - Set5
 - Set14
 - BSD100
@@ -174,7 +174,7 @@ Download the checkpoints and place them in:
 
 ```text
 experiments/pretrained_models/
-
+```
 ---
 
 ## Citation
